@@ -1,0 +1,577 @@
+@font-face {
+    font-family: 'cv';
+    src: url('/jellyka_saint_andrews_queen/Saint-Andrews Queen.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.inline {
+    display: inline;
+}
+
+.hr-middle {
+    z-index: -30;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#arc {
+    position: fixed;
+    bottom: -80;
+    right: 20;
+    color: #f3e5bf;
+    font-size: 8em;
+    z-index: 100;
+    font-family: 'Poiret One', cursive;
+    opacity: 0.6;
+    padding: 20px;
+    /*background: red;*/
+}
+
+#arc:hover {
+    opacity: 1;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+header #header-bg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url('http://widewallpapers.co/wp-content/uploads/2015/05/grey-polygon-abstract-hd-wallpaper-1920x1080.jpg') center center fixed;
+    /*background: url('http://41.media.tumblr.com/5c2e1a81f5b08e503bd02e358edee091/tumblr_mqde80Cv8P1s849x3o1_1280.jpg') center center fixed;*/
+    background-size: cover;
+    -webkit-filter: brightness(0.4);
+}
+
+header #header-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header #header-align-center {
+    font-family: 'Hind', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+header #my-face {
+    /*-webkit-filter: grayscale(0.6);*/
+    margin-right: 20px;
+}
+
+header #my-face img {
+/*    border-bottom: 4px solid #daa420;   */
+
+}
+
+header #my-name {
+    color: #fec503;
+    border-radius: 10px;
+    font-size: 5em;
+    text-transform: uppercase;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 0px;
+    font-weight: bold;
+
+}
+
+header #my-name span {
+}
+
+header #my-area {
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+header #how-old {
+    font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+header #my-city {
+    font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+header #my-job {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Poiret One', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+header #header-content-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .info {
+    margin-bottom: 10px;
+}
+
+/* SECTION */
+section {
+    padding-top: 60px;
+    width: 100%;
+    min-height: 400px;
+}
+
+section h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+.s-dark {
+    background: #211f1e;
+    color: #f3e5bf;
+}
+
+.s-semidark {
+    background: #262422;
+    color: #f3e5bf;
+}
+
+.s-light {
+    background: #F7F7F7;
+    color: #262422;
+}
+
+.skill {
+    margin: 1px;
+}
+
+
+/*menu*/
+#menu {
+    z-index: 30;
+    width: 100%;
+    position: fixed;
+    top:0;
+    height: 60px;
+}
+
+#menu #home {
+    line-height: 60px;
+    font-family: 'cv';
+    font-size: 2.3em;
+    letter-spacing: 0px;
+    position: absolute;
+    color: #fec503;
+    padding-left: 40px;
+
+}
+
+#menu ul {
+    display: -webkit-box;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 40px;
+}
+
+#menu ul li {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    list-style-type:none;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f3e5bf;
+    transition: color 0.1s;
+}
+
+#menu ul li:hover {
+    color: #fec503;
+}
+
+#menu ul a {
+    height: 60px;
+
+}
+
+/*skills*/
+#cont-skills {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+#cont-skills h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+#cont-skills #cont-diag {
+    position: relative;
+}
+
+#cont-skills #cont-other {
+    /*height: 200px;*/
+    /*width: 100px;*/
+    /*background: red;*/
+}
+
+#cont-skills #sk-languages {
+    position: absolute;
+}
+#cont-skills #sk-pro {
+    position: relative;
+}
+
+#cont-skills #sk-languages canvas {
+    position: absolute;
+    top: 0;
+}
+
+#cont-skills .sk-label {
+    position: absolute;
+    font-family: 'Hind', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    /*font-weight: bold;*/
+    letter-spacing: -2px;
+}
+#cont-skills .sk-label-pro {
+    letter-spacing: -2px;
+}
+#cont-skills .sk-label-lang {
+    letter-spacing: -1px;
+    font-size: 1em;
+}
+
+/*timeline*/
+
+
+#cont-parcours {
+    position: relative;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+}
+
+#cont-parcours #timeline {
+    width: 100%;
+    height: 400px;
+}
+
+#cont-parcours .puce {
+    font-size: 4em;
+}
+
+#cont-parcours .puce-in-progess {
+    position: relative;
+    font-size: 6em;
+    top: -19px;
+    z-index: 1;
+    color: #f9da8b;
+}
+
+#cont-parcours .line-dashed {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    border: 1px dashed #f3e5bf;
+}
+
+#cont-parcours #time-year {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+}
+
+#cont-parcours #time-promo {
+    position: absolute;
+    width: 100%;
+}
+
+#cont-parcours .year {
+    position: absolute;
+    top: -36px;
+    /*background: red;*/
+}
+
+
+#cont-parcours .date {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cont-parcours .last-date {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    top:-40px;
+    font-size: 1.5em;
+    color: #f9da8b;
+
+}
+
+#cont-parcours .promo {
+    text-align: left;
+    position: absolute;
+    top: 150px;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-30deg);
+}
+
+#cont-parcours .pm-name {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#cont-parcours .pm-first-name {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.9em;
+    color: #f9da8b;
+}
+
+#cont-parcours .pm-name span, .pm-first-name span {
+    text-transform: capitalize;
+}
+
+
+#cont-parcours .pm-desc {
+    font-family: 'Hind', sans-serif;
+}
+#cont-parcours .pm-first-desc {
+    font-family: 'Hind', sans-serif;
+    color: #f9da8b;
+}
+
+
+/*work*/
+#cont-work {
+    text-align: center;
+    padding: 30px;
+}
+
+#cont-work .work-cont {
+    position: relative;
+    display: inline-block;
+    height: 290px;
+    width: 300px;
+    margin: 10px;
+    background: #262422;
+}
+
+#cont-work .ghost {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    opacity: 0;
+}
+
+#cont-work .ghost:hover {
+    background: #FEC503;
+    opacity: 0.7;
+}
+
+#cont-work .work-desc {
+    display: flex;
+    flex-direction: column;
+    jusitfy-content: space-between;
+}
+
+#cont-work .work-bg {
+    position: relative;
+    height: 75%;
+    width: 100%;
+}
+
+#cont-work .work-name {
+    font-family: 'Hind', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#cont-work .work-detail {
+    font-family: 'Hind', sans-serif;
+}
+
+/*hobbies*/
+#cont-hobbies {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 70px;
+}
+
+#cont-hobbies .hobbies-cont {
+    position: relative;
+    width: 100px;
+}
+
+#cont-hobbies .hobbies-img {
+    /*height: 100%;*/
+    width: 100%;
+    position: relative;
+}
+
+#cont-hobbies .hobbies-desc {
+    font-family: 'Hind', sans-serif;
+
+    display: flex;
+    justify-conent: center;
+    flex-direction: column;
+}
+
+#cont-hobbies .hobbies-name {
+    text-transform: capitalize;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/*footer*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 75%;
+
+}
+
+footer h1 {
+    color: #fec503;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding-top: 70px;
+}
+
+footer #footer-bg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url('http://widewallpapers.co/wp-content/uploads/2015/05/grey-polygon-abstract-hd-wallpaper-1920x1080.jpg') center center fixed;
+    background-size: cover;
+    -webkit-filter: brightness(0.4) blur(0px);
+
+    z-index: -30;
+}
+
+footer #cont-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+footer #cont-middle {
+    height: 100px;
+}
+
+footer .contact {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    /*width: 300px;*/
+}
+
+footer .cont-contact {
+    display: flex;
+    padding-right: 30px;
+}
+
+footer .cont-contact:hover {
+    background: #fec503;
+}
+
+footer .data {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #fec503;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .cont-contact:hover .data {
+    color: #323434;
+}
+
+footer .img_contact {
+    position: relative;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer #img_email {
+    height: 100%;
+    width: 100%;
+    background: url('/img/mail_l.png') center center no-repeat;
+    background-size: auto 40px;
+
+}
+
+footer #email:hover #img_email {
+    background: url('/img/mail_b.png') center center no-repeat;
+    background-size: auto 40px;
+
+}
+
+footer #img_tel {
+    height: 100%;
+    width: 100%;
+    background: url('/img/tel_l.png') center center no-repeat;
+    background-size: auto 40px;
+}
+
+footer #tel:hover #img_tel{
+    background: url('/img/tel_b.png') center center no-repeat;
+    background-size: auto 40px;
+}

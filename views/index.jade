@@ -1,0 +1,72 @@
+html
+    head
+        link(rel="stylesheet", type="text/css", href="/style.css")
+        link(href='http://fonts.googleapis.com/css?family=Poiret+One', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Hind', rel='stylesheet', type='text/css')
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
+        link(href='http://fonts.googleapis.com/css?family=Roboto:700', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Dancing+Script:700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300', rel='stylesheet', type='text/css')
+    body
+        header#first
+            nav#menu
+                a(id="home" href='#first')= 'Curriculum vitae'
+                ul
+                    a(href="#c-skills")!= '<li id="li-skills">Competences</li>'
+                    a(href="#c-parcours")!= '<li id="li-parcours">Parcours</li>'
+                    a(href="#c-work")!= '<li id="li-work">Projets</li>'
+                    a(href="#c-hobbies")!= '<li id="li-hobbies">Interets</li>'
+
+            #header-bg
+            #header-content
+                #header-align-center
+                    //- #my-face
+                        img(src="https://cdn.42.fr/userprofil/emtermea.jpg")
+
+                    #header-content-flex
+                        #my-name.info!= 'Emmanuelle <span>Termeau</span>'
+                        #my-job.info!= '<div>Architecte</div> <div>en</div> <div>technologie</div> <div>numérique</div>'
+                        #my-area.info
+                            #how-old= '21 ans'
+                            #my-city= 'Paris et Région Parisienne'
+        
+        #container
+            section#c-skills.s-dark
+                h1= 'Mes competences'
+                #cont-skills
+                    #cont-other
+                    #cont-diag
+                        #sk-languages
+                        #sk-pro
+            section#c-parcours.s-semidark
+                h1= 'Mon parcours'
+                #cont-parcours
+                    #timeline
+                        #time-year
+                        #time-promo
+            section#c-work.s-dark
+                h1= 'Mes projets'
+                #cont-work
+            section#c-hobbies.s-semidark
+                h1= 'Mes interets'
+                #cont-hobbies
+            footer
+                h1= 'Contacts'
+                #footer-bg
+                #cont-footer
+                    #cont-middle
+        a(id= 'arc', href="#first")= '^'        
+        script(type="text/javascript", src='http://code.jquery.com/jquery-2.1.4.min.js')
+        script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
+        script(type="text/javascript", src='/Chart/Chart.js')
+        script(type="text/javascript", src='/perso.js')
+        script(type="text/javascript", src='/menuTop.js')
+        script.
+            $('a[href^="#"]').click(function(){
+                var the_id = $(this).attr("href");
+                $('html, body').animate({
+                    scrollTop:$(the_id).offset().top
+                    }, 'slow');
+                return false;
+                });
