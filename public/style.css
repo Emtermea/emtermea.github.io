@@ -8,6 +8,9 @@
     margin: 0;
 }
 
+::-moz-selection { color: #262422;  background: rgba(243, 229, 191, 0.9); }
+::selection      { color: #262422;  background: rgba(243, 229, 191, 0.9); } 
+
 .inline {
     display: inline;
 }
@@ -40,6 +43,20 @@ a {
 
 #arc:hover {
     opacity: 1;
+}
+.s-dark {
+    background: #211f1e;
+    color: #f3e5bf;
+}
+
+.s-semidark {
+    background: #262422;
+    color: #f3e5bf;
+}
+
+.s-light {
+    background: #F7F7F7;
+    color: #262422;
 }
 
 /* HEADER */
@@ -154,20 +171,6 @@ section h1 {
     margin-bottom: 70px;
 }
 
-.s-dark {
-    background: #211f1e;
-    color: #f3e5bf;
-}
-
-.s-semidark {
-    background: #262422;
-    color: #f3e5bf;
-}
-
-.s-light {
-    background: #F7F7F7;
-    color: #262422;
-}
 
 .skill {
     margin: 1px;

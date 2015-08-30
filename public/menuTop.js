@@ -61,7 +61,7 @@ $(document).scroll(function () {
 		flag = true;
 		$('#menu').animate({
 			backgroundColor: "#222222"
-		}, 200
+		}, 300
 		);
 
 
@@ -88,7 +88,7 @@ $(document).scroll(function () {
 		flag = false;
 		$('#menu').animate({
 			backgroundColor: "transparent"
-		}, 200
+		}, 300
 		);
 
 		$('#menu').find("li").unbind('mouseenter mouseleave')
