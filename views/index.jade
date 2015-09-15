@@ -21,21 +21,19 @@ html
             #header-bg
             #header-content
                 #header-align-center
-                    //- #my-face
-                        img(src="https://cdn.42.fr/userprofil/emtermea.jpg")
-
-                    #header-content-flex
+                    #header-content-flex.moit
                         #my-name.info!= 'Emmanuelle <span>Termeau</span>'
                         #my-job.info!= '<div>Architecte</div> <div>en</div> <div>technologie</div> <div>numérique</div>'
                         #my-area.info
                             #how-old= '21 ans'
                             #my-city= 'Paris et Région Parisienne'
+                    //- #my-face.moit
         
         #container
             section#c-skills.s-dark
                 h1= 'Mes competences'
                 #cont-skills
-                    //- #cont-other
+                    #cont-other
                     #cont-diag
                         #sk-languages
                         #sk-pro

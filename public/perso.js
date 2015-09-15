@@ -305,8 +305,6 @@ Manue.prototype.renderFooter = function() {
 	var cont_email = $('<a class="cont-contact" href="mailto:' + this.contact.mail.data + '" id="email"></a>');
 	var cont_tel = $('<a class="cont-contact" href="tel:' + this.contact.tel.data.replace(/\ /g, "") + '"id="tel"></a>');
 
-	var that = this;
-
 	var img_email = $('<div class="img_contact"><div id="img_email"></div></div>');
 	var img_tel = $('<div class="img_contact"><div id="img_tel"></div></div>');
 	var data_email = $('<div class="data">' + this.contact.mail.data + '</div>');
