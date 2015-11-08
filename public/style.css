@@ -70,7 +70,7 @@ header #header-bg {
     position: relative;
     height: 100%;
     width: 100%;
-    background: url('http://widewallpapers.co/wp-content/uploads/2015/05/grey-polygon-abstract-hd-wallpaper-1920x1080.jpg') center center fixed;
+    background: url('/img/bg.jpg') center center fixed;
     /*background: url('http://41.media.tumblr.com/5c2e1a81f5b08e503bd02e358edee091/tumblr_mqde80Cv8P1s849x3o1_1280.jpg') center center fixed;*/
     background-size: cover;
     -webkit-filter: brightness(0.4);
@@ -98,9 +98,11 @@ header .moit {
 }
 
 header #my-face {
-    background: url('/img/emtermea.jpg');
+    background: url('/img/emtermea.png');
     background-size: cover;
-    background-position: 100%;
+    position: relative;
+    width: 100%;
+    height: 60%;
 }
 
 header #my-name {
@@ -147,6 +149,7 @@ header #my-job {
 }
 
 header #header-content-flex {
+    z-index: 20;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -494,7 +497,7 @@ footer #footer-bg {
     top: 0;
     height: 100%;
     width: 100%;
-    background: url('http://widewallpapers.co/wp-content/uploads/2015/05/grey-polygon-abstract-hd-wallpaper-1920x1080.jpg') center center fixed;
+    background: url('/img/bg.jpg') center center fixed;
     background-size: cover;
     -webkit-filter: brightness(0.4) blur(0px);
 
