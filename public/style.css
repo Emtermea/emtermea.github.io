@@ -59,6 +59,17 @@ a {
     color: #262422;
 }
 
+.align-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.align-left {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 /* HEADER */
 header {
     position: relative;
@@ -71,7 +82,6 @@ header #header-bg {
     height: 100%;
     width: 100%;
     background: url('/img/bg.jpg') center center fixed;
-    /*background: url('http://41.media.tumblr.com/5c2e1a81f5b08e503bd02e358edee091/tumblr_mqde80Cv8P1s849x3o1_1280.jpg') center center fixed;*/
     background-size: cover;
     -webkit-filter: brightness(0.4);
 }
@@ -98,11 +108,19 @@ header .moit {
 }
 
 header #my-face {
-    background: url('/img/emtermea.png');
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    height: 60%;
+    -webkit-filter: grayscale(0.5);
+    background: url('/img/emtermea.png') no-repeat;
+    background-size: auto 70%;
+    background-position: 100% 100%;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    transition: all 0.1s;
+}
+header #my-face:hover {
+    -webkit-filter: grayscale(0);
 }
 
 header #my-name {
@@ -163,7 +181,7 @@ header .info {
 section {
     padding-top: 60px;
     width: 100%;
-    min-height: 400px;
+/*    min-height: 400px;*/
 }
 
 section h1 {
@@ -230,6 +248,53 @@ section h1 {
 
 }
 
+/*quality*/
+#c-quality {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+
+#c-quality .double {
+    position: relative;
+    margin: 20px;
+}
+
+
+#c-quality .double .top {
+    border-bottom: 1px solid #f3e5bf;
+}
+
+#c-quality .sub-double {
+    padding: 60px;
+    text-align: center;
+    width: 200px;
+}
+
+#c-quality .sub-double h1 {
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    border-bottom: 1px solid transparent;
+}
+
+#c-quality .sub-double h1:hover {
+    border-bottom: 1px solid #f3e5bf;
+}
+
+#c-quality .vr {
+    position: relative;
+    width: 1px;
+    background: #f3e5bf;
+}
+
+
 /*skills*/
 #cont-skills {
     display: flex;
@@ -274,7 +339,7 @@ section h1 {
     letter-spacing: -2px;
 }
 #cont-skills .sk-label-pro {
-    letter-spacing: -2px;
+    letter-spacing: 0px;
 }
 #cont-skills .sk-label-lang {
     letter-spacing: -1px;

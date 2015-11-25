@@ -1,5 +1,5 @@
 
-var Manue = function Manue(skills, parcours, work, hobbies) {
+function Manue(skills, parcours, work, hobbies) {
 	this.firstName = 'Emmanuelle';
 	this.lastName = 'Termeau';
 	this.old = 21;
@@ -32,6 +32,7 @@ Manue.prototype._renderSkPro = function(sk, rayon) {
 	.attr('id', 'sk-can-pro')
 	.attr('height', 2 * rayon)
 	.attr('width', 2 * rayon);
+    
 	cont.append(can);
 
 	var total = (function (sk) {
@@ -246,8 +247,9 @@ Manue.prototype.renderParcours = function() {
 		if (i == 0){
 			putPromo(this.parcours[i], firstDate, bigGap, true);
 		}
-		else
-			putPromo(this.parcours[i], firstDate, bigGap, false);
+		else {
+            putPromo(this.parcours[i], firstDate, bigGap, false);
+        }
 	}
 
 	timeline.append(line);
@@ -286,7 +288,7 @@ Manue.prototype.renderHobbies = function() {
 			desc: $('<div class="hobbies-desc"></div>'),
 			name: $('<div class="hobbies-name"></div>').html(this.hobbies[i].name),
 			detail: $('<div class="hobbies-detail"></div>').html(this.hobbies[i].detail),
-		}
+		};
 
 		elem.div.append(elem.img);
 
@@ -325,53 +327,53 @@ Manue.prototype.renderFooter = function() {
 
 var skills = {
 	pro: [
-	{name: 'programmation imperative', level: 1096, color: '#daa420'},
-	{name: 'algorithme', level: 950, color: '#930e48'},
-	{name: 'graphiques', level: 390, color: '#d04a2e'},
-	{name: 'web', level: 295, color: '#88a725'},
-	{name: 'programmation orientée object', level: 160, color: '#ed8c2b'}
+        {name: 'programmation imperative', level: 1096, color: '#daa420'},
+        {name: 'algorithme', level: 950, color: '#930e48'},
+        {name: 'graphique', level: 390, color: '#d04a2e'},
+        {name: 'web', level: 295, color: '#88a725'},
+        {name: 'programmation orientée object', level: 160, color: '#ed8c2b'}
 	],
 
 	perso: [
-	{name: 'créativité', level: 5},
-	{name: 'adaption', level: 4},
-	{name: 'rigueur', level: 5},
+        {name: 'créativité', level: 5},
+        {name: 'adaption', level: 4},
+        {name: 'rigueur', level: 5},
 	],
 
 	language: [
-	{name: 'C', level: 200, color: '#88a725'},
-	{name: 'Python', level: 75, color: '#d04a2e'},
-	{name: 'Php', level: 40, color: '#33203a'},
-	{name: 'Prolog', level: 55, color: '#ed8c2b'},
-	{name: 'Html', level: 50, color: '#daa420'},
-	{name: 'Css', level: 50, color: '#930e48'},
-	// {name: 'Swift', level: 20, color: '#5d6d70'},
+        {name: 'C', level: 200, color: '#88a725'},
+        {name: 'Ruby', level: 50, color: '#8c1c2c'},
+        {name: 'Python', level: 85, color: '#d04a2e'},
+        {name: 'Php', level: 40, color: '#33203a'},
+        {name: 'Prolog', level: 40, color: '#ed8c2b'},
+        {name: 'Html', level: 40, color: '#daa420'},
+        {name: 'Css', level: 40, color: '#930e48'},
 	],
 
 	speaking: [
-	{name: 'Français', level: 5},
-	{name: 'Anglais', level: 3},
+        {name: 'Français', level: 5},
+        {name: 'Anglais', level: 3},
 	]
 };
 
 var parcours = [
-{name: 'Ecole 42', promo: '11/2014', desc: 'En cours de preparation - Paris 17ème', logo: 'http://www.cfa-stephenson.fr/sites/default/files/images/%C3%A9cole%2042%20logo.png'},
-{name: 'DUT <span>Techniques de commercialisation</span>', promo: '01/2014', desc: 'IUT d\'Evreux (27)', logo: 'http://www.nae.fr/wp-content/uploads/2014/06/IUT_evreux1.jpg'},
-{name: 'Bac <span>Scientifique</span>', promo: '01/2012', desc: 'Lycée Porte de Normandie (27) - Mention Bien', logo: 'http://www.festivaleure.com/2010/logos/lycee_verneuil.jpg'},
+    {name: 'Ecole 42', promo: '11/2014', desc: 'En cours de preparation - Paris 17ème', logo: 'http://www.cfa-stephenson.fr/sites/default/files/images/%C3%A9cole%2042%20logo.png'},
+    {name: 'DUT <span>Techniques de commercialisation</span>', promo: '01/2014', desc: 'IUT d\'Evreux (27)', logo: 'http://www.nae.fr/wp-content/uploads/2014/06/IUT_evreux1.jpg'},
+    {name: 'Bac <span>Scientifique</span>', promo: '01/2012', desc: 'Lycée Porte de Normandie (27) - Mention Bien', logo: 'http://www.festivaleure.com/2010/logos/lycee_verneuil.jpg'},
 ];
 
 var work = [
-{name:'wolf3d', detail: 'Je t\'aime ma cherie d\'amour', img: 'http://apple2history.org/wp-content/uploads/2012/05/Wolf3d-title.jpg'},
-{name:'computor_v1', detail: 'I\'m a banana', img: 'http://www.stem-link.org/wp-content/uploads/2014/10/Math-Circle.jpg'},
-{name:'2048', detail: 'Aliquam a ipsum pellentesque lorem', img: 'http://gabrielecirulli.github.io/2048/meta/og_image.png'},
-{name:'fdf', detail: 'Etiam pharetra rutrum porta. Proin sapien', img:'http://i.stack.imgur.com/wZYoC.jpg'},
-{name:'libft', detail: 'Aenean efficitur est sem, sit', img: '/img/lib.png'},
+    {name:'wolf3d', detail: 'Je t\'aime ma cherie d\'amour', img: 'http://apple2history.org/wp-content/uploads/2012/05/Wolf3d-title.jpg'},
+    {name:'computor_v1', detail: 'I\'m a banana', img: 'http://www.stem-link.org/wp-content/uploads/2014/10/Math-Circle.jpg'},
+    {name:'2048', detail: 'Aliquam a ipsum pellentesque lorem', img: 'http://gabrielecirulli.github.io/2048/meta/og_image.png'},
+    {name:'fdf', detail: 'Etiam pharetra rutrum porta. Proin sapien', img:'http://i.stack.imgur.com/wZYoC.jpg'},
+    {name:'libft', detail: 'Aenean efficitur est sem, sit', img: '/img/lib.png'},
 ];
 
 var hobbies = [
-{name: 'sports', detail: 'Phasellus lectus turpis, sollicitudin at auctor eget, elementum at nunc', img: '/img/sport.png'},
-{name: 'séries TV', detail: 'Sed at facilisis nisl. Aenean bibendum urna sed porta pretium', img: '/img/pop.png'},
-{name: 'domaine associatif', detail: 'BDE de l\'ecole 42 - Festi’Routils', img: '/img/assoc.png'},
+    {name: 'sports', detail: 'Phasellus lectus turpis, sollicitudin at auctor eget, elementum at nunc', img: '/img/sport.png'},
+    {name: 'séries TV', detail: 'Sed at facilisis nisl. Aenean bibendum urna sed porta pretium', img: '/img/pop.png'},
+    {name: 'domaine associatif', detail: 'BDE de l\'ecole 42 - Festi’Routils', img: '/img/assoc.png'},
 ];
 
 var manue = new Manue(skills, parcours, work, hobbies);

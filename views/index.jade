@@ -1,6 +1,7 @@
 html
     head
         link(rel="stylesheet", type="text/css", href="/style.css")
+
         link(href='http://fonts.googleapis.com/css?family=Poiret+One', rel='stylesheet', type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Hind', rel='stylesheet', type='text/css')
         link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
@@ -21,13 +22,13 @@ html
             #header-bg
             #header-content
                 #header-align-center
+                    #my-face
                     #header-content-flex.moit
                         #my-name.info!= 'Emmanuelle <span>Termeau</span>'
                         #my-job.info!= '<div>Architecte</div> <div>en</div> <div>technologie</div> <div>numérique</div>'
                         #my-area.info
                             #how-old= '21 ans'
                             #my-city= 'Paris et Région Parisienne'
-                    //- #my-face.moit
         
         #container
             section#c-skills.s-dark
@@ -37,6 +38,18 @@ html
                     #cont-diag
                         #sk-languages
                         #sk-pro
+            section#c-quality.s-dark
+                .double.left
+                    .sub-double.top
+                        h1= 'Curieuse'
+                    .sub-double.bottom
+                        h1= 'Logique'
+                .vr
+                .double.right
+                    .sub-double.top
+                        h1= 'Competitive'
+                    .sub-double.bottom
+                        h1= 'Four'
             section#c-parcours.s-semidark
                 h1= 'Mon parcours'
                 #cont-parcours
@@ -54,9 +67,10 @@ html
                 #footer-bg
                 #cont-footer
                     #cont-middle
-        a(id= 'arc', href="#first")= '^'        
+        a(id= 'arc', href="#first")= '^'
         script(type="text/javascript", src='http://code.jquery.com/jquery-2.1.4.min.js')
         script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
+        script(src="/bootstrap-3.3.6-dist/js/bootstrap.js")
         script(type="text/javascript", src='/Chart/Chart.js')
         script(type="text/javascript", src='/perso.js')
         script(type="text/javascript", src='/menuTop.js')
