@@ -23,7 +23,7 @@ Manue.prototype._renderSkPro = function(sk, rayon) {
 	var options = {
 		segmentStrokeWidth : 10,
 		segmentStrokeColor : "rgba(33,31,30,1)",
-		percentageInnerCutout : 75,
+		percentageInnerCutout : 90,
 		animationEasing : "easeOutQuad",
 		legendTemplate : "",
 	};
@@ -145,7 +145,7 @@ Manue.prototype._renderSkLang = function(sk, exRayon, rayon) {
 Manue.prototype.renderSkill = function() {
 	var rayon = 200;
 	this._renderSkPro(this.skills.pro, rayon);
-	this._renderSkLang(this.skills.language, rayon, rayon - 60);
+	this._renderSkLang(this.skills.language, rayon, rayon - 50);
 };
 
 function getGap(date1, date2) {

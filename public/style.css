@@ -108,7 +108,7 @@ header .moit {
 }
 
 header #my-face {
-    -webkit-filter: grayscale(0.5);
+    -webkit-filter: grayscale(0.7);
     background: url('/img/emtermea.png') no-repeat;
     background-size: auto 70%;
     background-position: 100% 100%;
@@ -339,6 +339,7 @@ section h1 {
     letter-spacing: -2px;
 }
 #cont-skills .sk-label-pro {
+    width: 400;
     letter-spacing: 0px;
 }
 #cont-skills .sk-label-lang {
