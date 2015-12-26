@@ -1,13 +1,27 @@
 var flag = false;
-var sens = 100;
+var sens = 300;
 var cSkills = $('#c-skills').position().top - sens;
 var cParcours = $('#c-parcours').position().top - sens;
 var cWork = $('#c-work').position().top - sens;
 var cHobbies = $('#c-hobbies').position().top - sens;
+var cContact = $('#footer').position().top - sens;
+
 
 $(document).scroll(function () {
 
-	if ($(document).scrollTop() >= cHobbies) {
+	if ($(document).scrollTop() >= cContact) {
+		$('#li-skills').css("color", "#f3e5bf")
+		.css("background", '#transparent');
+		$('#li-work').css("color", "#f3e5bf")
+		.css("background", 'transparent');
+		$('#li-parcours').css("color", "#f3e5bf")
+		.css("background", 'transparent');
+		$('#li-hobbies').css("color", "#f3e5bf")
+		.css("background", 'transparent');
+        $('#li-contact').css("color", "#323434")
+        .css("background", '#fec503');
+	}
+	else if ($(document).scrollTop() >= cHobbies) {
 		$('#li-skills').css("color", "#f3e5bf")
 		.css("background", '#transparent');
 		$('#li-work').css("color", "#f3e5bf")
@@ -16,6 +30,8 @@ $(document).scroll(function () {
 		.css("background", 'transparent');
 		$('#li-hobbies').css("color", "#323434")
 		.css("background", '#fec503');
+        $('#li-contact').css("color", "#f3e5bf")
+        .css("background", 'transparent');
 	}
 	else if ($(document).scrollTop() >= cWork) {
 		$('#li-skills').css("color", "#f3e5bf")
@@ -26,6 +42,8 @@ $(document).scroll(function () {
 			.css("background", 'transparent');
 		$('#li-hobbies').css("color", "#f3e5bf")
 			.css("background", 'transparent');
+        $('#li-contact').css("color", "#f3e5bf")
+        .css("background", 'transparent');
 	}
 	else if ($(document).scrollTop() >= cParcours) {
 		$('#li-skills').css("color", "#f3e5bf")
@@ -36,6 +54,8 @@ $(document).scroll(function () {
 			.css("background", '#fec503');
 		$('#li-hobbies').css("color", "#f3e5bf")
 			.css("background", 'transparent');
+        $('#li-contact').css("color", "#f3e5bf")
+        .css("background", 'transparent');
 	}
 	else if ($(document).scrollTop() >= cSkills) {
 		$('#li-skills').css("color", "#323434")
@@ -46,6 +66,8 @@ $(document).scroll(function () {
 		.css("background", 'transparent');
 		$('#li-hobbies').css("color", "#f3e5bf")
 		.css("background", 'transparent');
+        $('#li-contact').css("color", "#f3e5bf")
+        .css("background", 'transparent');
 	}
 	else {
 		$('#li-skills').css("color", "#f3e5bf")
@@ -56,6 +78,8 @@ $(document).scroll(function () {
 		.css("background", 'transparent');
 		$('#li-hobbies').css("color", "#f3e5bf")
 		.css("background", 'transparent');
+        $('#li-contact').css("color", "#f3e5bf")
+        .css("background", 'transparent');
 	}
 	if (!flag && $(document).scrollTop() >= $('header').height() / 2) {
 		flag = true;
