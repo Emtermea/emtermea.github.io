@@ -1,0 +1,35 @@
+header #my-face {
+    width: 50%;
+    background-size: auto 70%;
+    background-position: 100% 100%;
+}
+
+#menu {
+	z-index: 30;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	height: 60px;
+}
+
+section h1 {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 70px;
+}
+
+#menu ul {
+	display: -webkit-box;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	padding-right: 40px;
+}
+
+#menu ul li {
+	padding-left: 10px;
+	padding-right: 10px;
+}

@@ -1,6 +1,6 @@
 html
     head
-        link(rel="stylesheet", type="text/css", href="/style.css")
+        link(rel="stylesheet", type="text/css", href="/css/style.css")
 
         link(href='http://fonts.googleapis.com/css?family=Poiret+One', rel='stylesheet', type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Hind', rel='stylesheet', type='text/css')
@@ -34,6 +34,21 @@ html
                         //-     #my-city= 'Paris et Région Parisienne'
         
         #container
+            section#c-quality.s-semidark
+                #quality-content
+                    #quality-cross
+                        svg(width="350", height="350", version="1.1", xmlns="http://www.w3.org/2000/svg")
+                            polygon(points="0 0 350 350", stroke="#f3e5bf", fill="transparent", stroke-width="1")
+                            polygon(points="0 350 350 0", stroke="#f3e5bf", fill="transparent", stroke-width="1")
+                    #quality-text
+                        #quality-vetical
+                            .qt= 'Compétitive'
+                            .qt= 'Créative'
+                        #quality-horizontal
+                            #quality-horizontal-center1
+                                #quality-horizontal-center2
+                                    .qt= 'Rigoureuse'
+                                    .qt= 'Curieuse'
             section#c-skills.s-dark
                 h1= 'Mes competences'
                 #cont-skills
@@ -41,18 +56,6 @@ html
                     #cont-diag
                         #sk-languages
                         #sk-pro
-            section#c-quality.s-dark
-                .double.left
-                    .sub-double.top
-                        h1= 'Curieuse'
-                    .sub-double.bottom
-                        h1= 'Logique'
-                .vr
-                .double.right
-                    .sub-double.top
-                        h1= 'Competitive'
-                    .sub-double.bottom
-                        h1= 'Rigoureuse'
             section#c-parcours.s-semidark
                 h1= 'Mon parcours'
                 #cont-parcours
@@ -73,7 +76,6 @@ html
         a(id= 'arc', href="#first")= '^'
         script(type="text/javascript", src='http://code.jquery.com/jquery-2.1.4.min.js')
         script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
-        script(src="/bootstrap-3.3.6-dist/js/bootstrap.js")
         script(type="text/javascript", src='/Chart/Chart.js')
         script(type="text/javascript", src='/perso.js')
         script(type="text/javascript", src='/menuTop.js')
