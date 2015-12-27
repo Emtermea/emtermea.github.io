@@ -494,17 +494,17 @@ var work = [
 var hobbies = [
 	{
 		name: 'sports',
-		detail: 'Phasellus lectus turpis, sollicitudin at auctor eget, elementum at nunc',
+		detail: 'Membre d\'une équipe de handball pendant 13 ans',
 		img: '/img/sport.png'
 	},
 	{
 		name: 'séries TV',
-		detail: 'Sed at facilisis nisl. Aenean bibendum urna sed porta pretium',
+		detail: 'Just I like it',
 		img: '/img/pop.png'
 	},
 	{
 		name: 'domaine associatif',
-		detail: 'BDE de l\'ecole 42 - Festi’Routils',
+		detail: 'BDE de l\'ecole 42 - Festi’Routils (27)',
 		img: '/img/assoc.png'
 	},
 ];
