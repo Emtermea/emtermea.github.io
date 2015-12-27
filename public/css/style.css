@@ -151,7 +151,7 @@ header #my-face:hover {
 header #my-name {
     color: #fec503;
     border-radius: 10px;
-    font-size: 3.8em;
+    font-size: 3vw;
     text-transform: uppercase;
     font-family: 'Poiret One', cursive;
     letter-spacing: 0px;
