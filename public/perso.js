@@ -64,7 +64,7 @@ Manue.prototype._renderSkPro = function (sk, rayon) {
 			var x = Math.cos(pc * 2 * Math.PI) * (rayon) + rayon;
 			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon;
 		} else if (prog / total - 0.25 < 0.75) {
-			var x = Math.cos(pc * 2 * Math.PI) * (rayon) + rayon - 110;
+			var x = Math.cos(pc * 2 * Math.PI) * (rayon) + rayon - 119;
 			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon;
 		} else {
 			var x = Math.cos(pc * 2 * Math.PI) * (rayon) + rayon - 100;
@@ -461,28 +461,33 @@ var parcours = [
 var work = [
 	{
 		name: 'wolf3d',
-		detail: 'Je t\'aime ma cherie d\'amour',
+		detail: 'Reprend le jeu wolfenstein 3d avec le principe de Raycasting',
 		img: 'http://apple2history.org/wp-content/uploads/2012/05/Wolf3d-title.jpg'
 	},
 	{
 		name: 'computor_v1',
-		detail: 'I\'m a banana',
+        detail: 'Résout un polynome de degré 2',
 		img: 'http://www.stem-link.org/wp-content/uploads/2014/10/Math-Circle.jpg'
 	},
 	{
 		name: '2048',
-		detail: 'Aliquam a ipsum pellentesque lorem',
+		detail: 'Le jeu 2048 avec la librairie ncurses',
 		img: 'http://gabrielecirulli.github.io/2048/meta/og_image.png'
 	},
 	{
 		name: 'fdf',
-		detail: 'Etiam pharetra rutrum porta. Proin sapien',
+		detail: 'Représente schematiquement en relief une map',
 		img: 'http://i.stack.imgur.com/wZYoC.jpg'
 	},
 	{
 		name: 'libft',
-		detail: 'Aenean efficitur est sem, sit',
+		detail: 'Reprend des fonctions basiques de la libC',
 		img: '/img/lib.png'
+	},
+	{
+		name: 'libAsm',
+		detail: 'Reprend des fonctions basiques de la libC en ASM',
+		img: '/img/libasm.png'
 	},
 ];
 
