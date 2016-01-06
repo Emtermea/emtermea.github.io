@@ -1,5 +1,7 @@
 var express = require('express');
 
+//Augmenter la taille de la police + photo
+
 var app = express();
 
 var PORT = 4600;

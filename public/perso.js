@@ -312,7 +312,7 @@ Manue.prototype.renderFooter = function () {
 	var email = $('<div class="contact"></div>');
 	var tel = $('<div class="contact"></div>');
     var github = $('<div class="contact"></div>');
-                   
+
 	var cont_email = $('<a class="cont-contact" href="mailto:' + this.contact.mail.data + '" id="email"></a>');
 	var cont_tel = $('<a class="cont-contact" href="tel:' + this.contact.tel.data.replace(/\ /g, "") + '"id="tel"></a>');
     var cont_github = $('<a class="cont-contact" href="https://github.com' + this.contact.github.data + '" id="github"></a>');
@@ -325,7 +325,7 @@ Manue.prototype.renderFooter = function () {
 	var data_email = $('<div class="data">' + this.contact.mail.data + '</div>');
 	var data_tel = $('<div class="data">' + this.contact.tel.data + '</div>');
     var data_github = $('<div class="data">' + this.contact.github.data + '</div>');
-    
+
     cont_github.append(img_github);
     cont_github.append(data_github);
 	cont_email.append(img_email);
