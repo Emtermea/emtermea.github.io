@@ -3,7 +3,7 @@ function Manue(skills, parcours, work, hobbies) {
 	this.lastName = 'Termeau';
 	this.old = 21;
 	this.region = ['Paris', 'Région Parisienne'];
-	this.diploma = 'Architecte en technologie numérique';
+	this.diploma = 'Développeur';
 	this.contact = {
 		mail: {
 			data: 'emtermea@student.42.fr',

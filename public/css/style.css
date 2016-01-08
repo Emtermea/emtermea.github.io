@@ -170,7 +170,7 @@ header #my-city {
 header #my-job {
     color: rgba(255, 255, 255, 0.9);
     font-family: 'Poiret One', cursive;
-    font-size: 1.2vw;
+    font-size: 1.7vw;
     font-weight: bold;
     letter-spacing: 4px;
     display: flex;
@@ -330,11 +330,15 @@ section h1 {
 }
 /*skills*/
 
+#c-skills {
+    padding-bottom: 90px;
+}
+
 #cont-skills {
     margin-top: 9%;
     display: flex;
     justify-content: center;
-    padding-bottom: 10%;
+    padding-bottom: 150px;
 }
 
 #cont-skills h2 {
@@ -385,6 +389,46 @@ section h1 {
     font-size: 1em;
 }
 
+#cont-lang {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#cont-lang .content-lang {
+    text-align: center;
+    width: 20%;
+}
+
+#frensh .lang-name {
+    background: #8C1C2C;
+}
+
+#english .lang-name {
+    background: #ED8C2B;
+}
+
+#spanish .lang-name {
+    
+    background: #d04a2e;
+}
+
+#cont-lang .lang-name {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#cont-lang .lang-level {
+    font-family: 'Hind', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.1em;
+    background: #262422;
+}
 
 /*timeline*/
 
