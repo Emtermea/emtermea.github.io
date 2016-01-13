@@ -13,10 +13,10 @@ function Manue(skills, parcours, work, hobbies) {
 			data: '06 50 65 42 57',
 			img: '/img/tel_'
 		},
-        github: {
-            data: '/emtermea',
-            img: '/img/github_'
-        }
+		github: {
+			data: '/emtermea',
+			img: '/img/github_'
+		}
 	};
 	this.skills = skills;
 	this.parcours = parcours;
@@ -38,16 +38,16 @@ Manue.prototype._renderSkPro = function (sk, rayon) {
 	};
 
 	var can = $('<canvas></canvas>')
-		.attr('id', 'sk-can-pro')
-		.attr('height', 2 * rayon)
-		.attr('width', 2 * rayon);
+	.attr('id', 'sk-can-pro')
+	.attr('height', 2 * rayon)
+	.attr('width', 2 * rayon);
 
 	cont.append(can);
 
 	var total = (function (sk) {
 		var res = 0;
 		for (i in sk)
-			res += sk[i].level;
+		res += sk[i].level;
 		return res;
 	})(sk);
 
@@ -72,28 +72,28 @@ Manue.prototype._renderSkPro = function (sk, rayon) {
 		}
 
 		cont.append($('<div class="sk-label sk-label-pro"></div>')
-			.css('top', y)
-			.css('left', x)
-			.css('color', sk[i].color)
-			.html(sk[i].name)
-		);
-		data.push({
-			label: sk[i].name,
-			value: sk[i].level,
-			color: sk[i].color
-		});
-	}
+		.css('top', y)
+		.css('left', x)
+		.css('color', sk[i].color)
+		.html(sk[i].name)
+	);
+	data.push({
+		label: sk[i].name,
+		value: sk[i].level,
+		color: sk[i].color
+	});
+}
 
-	var ctx = document.getElementById('sk-can-pro').getContext("2d");
-	window.myDoughnut = new Chart(ctx).Doughnut(data, options);
+var ctx = document.getElementById('sk-can-pro').getContext("2d");
+window.myDoughnut = new Chart(ctx).Doughnut(data, options);
 }
 
 Manue.prototype._renderSkLang = function (sk, exRayon, rayon) {
 	var cont = $('#sk-languages')
-		.css('height', (2 * rayon) + 'px')
-		.css('width', (2 * rayon) + 'px')
-		.css('left', exRayon - rayon)
-		.css('top', exRayon - rayon);
+	.css('height', (2 * rayon) + 'px')
+	.css('width', (2 * rayon) + 'px')
+	.css('left', exRayon - rayon)
+	.css('top', exRayon - rayon);
 
 
 	var options = {
@@ -105,15 +105,15 @@ Manue.prototype._renderSkLang = function (sk, exRayon, rayon) {
 	};
 
 	var can = $('<canvas></canvas>')
-		.attr('id', 'sk-can-lang')
-		.attr('height', 2 * rayon)
-		.attr('width', 2 * rayon);
+	.attr('id', 'sk-can-lang')
+	.attr('height', 2 * rayon)
+	.attr('width', 2 * rayon);
 	cont.append(can);
 
 	var total = (function (sk) {
 		var res = 0;
 		for (i in sk)
-			res += sk[i].level;
+		res += sk[i].level;
 		return res;
 	})(sk);
 
@@ -137,20 +137,20 @@ Manue.prototype._renderSkLang = function (sk, exRayon, rayon) {
 			var y = Math.sin(pc * 2 * Math.PI) * (rayon - 30) + rayon - 20;
 		}
 		cont.append($('<div class="sk-label sk-label-lang"></div>')
-			.css('top', y)
-			.css('left', x)
-			.css('color', '#f3e5bf')
-			.html(sk[i].name)
-		);
-		data.push({
-			label: sk[i].name,
-			value: sk[i].level,
-			color: sk[i].color
-		});
-	}
+		.css('top', y)
+		.css('left', x)
+		.css('color', '#f3e5bf')
+		.html(sk[i].name)
+	);
+	data.push({
+		label: sk[i].name,
+		value: sk[i].level,
+		color: sk[i].color
+	});
+}
 
-	var ctx = document.getElementById('sk-can-lang').getContext("2d");
-	window.myDoughnut = new Chart(ctx).Doughnut(data, options);
+var ctx = document.getElementById('sk-can-lang').getContext("2d");
+window.myDoughnut = new Chart(ctx).Doughnut(data, options);
 }
 
 Manue.prototype.renderSkill = function () {
@@ -172,7 +172,7 @@ function getGap(date1, date2) {
 
 
 	if (d1.y == d2.y)
-		return (Math.abs(d1.m - d2.m));
+	return (Math.abs(d1.m - d2.m));
 	else if (d1.y < d2.y) {
 		if (d1.m < d2.m) {
 			return (Math.abs(d1.y - d2.y) * 12) + Math.abs(d2.m - d1.m);
@@ -194,9 +194,9 @@ function putYear(date, firstDate, bigGap, last) {
 
 	if (last > -1) {
 		if (last == 1)
-			contYear.html('<div class="puce-in-progess">•</div><div class="last-date">' + date.substr(3, 4) + '</div>');
+		contYear.html('<div class="puce-in-progess">•</div><div class="last-date">' + date.substr(3, 4) + '</div>');
 		else if (last == 0)
-			contYear.html('<div class="puce">•</div><div class="date">' + date.substr(3, 4) + '</div>');
+		contYear.html('<div class="puce">•</div><div class="date">' + date.substr(3, 4) + '</div>');
 		contYear.css('left', ((gap / bigGap) * 100) + "%");
 		cont.append(contYear);
 	}
@@ -242,11 +242,11 @@ Manue.prototype.renderParcours = function () {
 	var y = 0;
 	while (iDate != lastDate) {
 		if ("01/" + (parseInt(iDate.substr(3, 4)) + 1) == lastDate)
-			putYear(iDate, firstDate, bigGap, 1);
+		putYear(iDate, firstDate, bigGap, 1);
 		else if (y)
-			putYear(iDate, firstDate, bigGap, 0);
+		putYear(iDate, firstDate, bigGap, 0);
 		else
-			putYear(iDate, firstDate, bigGap, -1);
+		putYear(iDate, firstDate, bigGap, -1);
 		iDate = "01/" + (parseInt(iDate.substr(3, 4)) + 1);
 		y++;
 	}
@@ -274,7 +274,7 @@ Manue.prototype.renderWork = function () {
 			name: $('<div class="work-name">' + this.work[i].name + '</div>'),
 			detail: $('<div class="work-detail">' + this.work[i].detail + '</div>')
 		};
-		var ghost = $('<a href="#" class="ghost">+</a>');
+		var ghost = $('<a href="' + this.work[i].url + '" class="ghost">+</a>');
 		elem.bg.append(ghost);
 		elem.desc.append(elem.bg);
 		elem.desc.append(elem.name);
@@ -311,33 +311,33 @@ Manue.prototype.renderFooter = function () {
 
 	var email = $('<div class="contact"></div>');
 	var tel = $('<div class="contact"></div>');
-    var github = $('<div class="contact"></div>');
+	var github = $('<div class="contact"></div>');
 
 	var cont_email = $('<a class="cont-contact" href="mailto:' + this.contact.mail.data + '" id="email"></a>');
 	var cont_tel = $('<a class="cont-contact" href="tel:' + this.contact.tel.data.replace(/\ /g, "") + '"id="tel"></a>');
-    var cont_github = $('<a class="cont-contact" href="https://github.com' + this.contact.github.data + '" id="github"></a>');
+	var cont_github = $('<a class="cont-contact" href="https://github.com' + this.contact.github.data + '" id="github"></a>');
 
 
 	var img_email = $('<div class="img_contact"><div id="img_email"></div></div>');
 	var img_tel = $('<div class="img_contact"><div id="img_tel"></div></div>');
-    var img_github = $('<div class="img_contact"><div id="img_github"></div></div>');
+	var img_github = $('<div class="img_contact"><div id="img_github"></div></div>');
 
 	var data_email = $('<div class="data">' + this.contact.mail.data + '</div>');
 	var data_tel = $('<div class="data">' + this.contact.tel.data + '</div>');
-    var data_github = $('<div class="data">' + this.contact.github.data + '</div>');
+	var data_github = $('<div class="data">' + this.contact.github.data + '</div>');
 
-    cont_github.append(img_github);
-    cont_github.append(data_github);
+	cont_github.append(img_github);
+	cont_github.append(data_github);
 	cont_email.append(img_email);
 	cont_email.append(data_email);
 	cont_tel.append(img_tel);
 	cont_tel.append(data_tel);
 
-    github.append(cont_github);
+	github.append(cont_github);
 	email.append(cont_email);
 	tel.append(cont_tel);
 
-    cont.append(github);
+	cont.append(github);
 	cont.append(email);
 	cont.append(tel);
 };
@@ -462,32 +462,38 @@ var work = [
 	{
 		name: 'wolf3d',
 		detail: 'Reprend le jeu wolfenstein 3d avec le principe de Raycasting',
-		img: 'http://apple2history.org/wp-content/uploads/2012/05/Wolf3d-title.jpg'
+		img: 'http://apple2history.org/wp-content/uploads/2012/05/Wolf3d-title.jpg',
+		url: 'https://github.com/emtermea/Wolf3D'
 	},
 	{
 		name: 'computor_v1',
-        detail: 'Résout un polynome de degré 2',
-		img: 'http://www.stem-link.org/wp-content/uploads/2014/10/Math-Circle.jpg'
+		detail: 'Résout un polynome de degré 2',
+		img: 'http://www.stem-link.org/wp-content/uploads/2014/10/Math-Circle.jpg',
+		url: 'https://github.com/emtermea/computorv1'
 	},
 	{
 		name: '2048',
 		detail: 'Le jeu 2048 avec la librairie ncurses',
-		img: 'http://gabrielecirulli.github.io/2048/meta/og_image.png'
+		img: 'http://gabrielecirulli.github.io/2048/meta/og_image.png',
+		url: 'https://github.com/emtermea/2048'
 	},
 	{
 		name: 'fdf',
 		detail: 'Représente schematiquement en relief une map',
-		img: 'http://i.stack.imgur.com/wZYoC.jpg'
+		img: 'http://i.stack.imgur.com/wZYoC.jpg',
+		url: 'https://github.com/emtermea/Fdf'
 	},
 	{
 		name: 'libft',
 		detail: 'Reprend des fonctions basiques de la libC',
-		img: '/img/lib.png'
+		img: '/img/lib.png',
+		url: 'https://github.com/emtermea/Libft'
 	},
 	{
 		name: 'libAsm',
 		detail: 'Reprend des fonctions basiques de la libC en ASM',
-		img: '/img/libasm.png'
+		img: '/img/libasm.png',
+		url: 'https://github.com/emtermea/LibASM'
 	},
 ];
 
