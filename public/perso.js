@@ -27,12 +27,11 @@ function Manue(skills, parcours, work, hobbies) {
 Manue.prototype._renderSkPro = function (sk, rayon) {
 
 	var cont = $('#sk-pro').css('height', (2 * rayon) + 'px').css('width', (2 * rayon) + 'px');
-	$('#cont-diag').css('height', (2 * rayon) + 'px').css('width', (2 * rayon) + 'px');
 
 	var options = {
 		segmentStrokeWidth: 10,
 		segmentStrokeColor: "rgba(33,31,30,1)",
-		percentageInnerCutout: 90,
+		percentageInnerCutout: 83,
 		animationEasing: "easeOutQuad",
 		legendTemplate: "",
 	};
@@ -62,13 +61,13 @@ Manue.prototype._renderSkPro = function (sk, rayon) {
 			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon - 39;
 		} else if (prog / total - 0.25 < 0.50) {
 			var x = Math.cos(pc * 2 * Math.PI) * (rayon) + rayon;
-			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon;
+			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon + 20;
 		} else if (prog / total - 0.25 < 0.75) {
 			var x = Math.cos(pc * 2 * Math.PI) * (rayon) + rayon - 119;
 			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon;
 		} else {
 			var x = Math.cos(pc * 2 * Math.PI) * (rayon) + rayon - 100;
-			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon - 40;
+			var y = Math.sin(pc * 2 * Math.PI) * (rayon) + rayon - 60;
 		}
 
 		cont.append($('<div class="sk-label sk-label-pro"></div>')
@@ -92,7 +91,6 @@ Manue.prototype._renderSkLang = function (sk, exRayon, rayon) {
 	var cont = $('#sk-languages')
 	.css('height', (2 * rayon) + 'px')
 	.css('width', (2 * rayon) + 'px')
-	.css('left', exRayon - rayon)
 	.css('top', exRayon - rayon);
 
 
@@ -154,9 +152,9 @@ window.myDoughnut = new Chart(ctx).Doughnut(data, options);
 }
 
 Manue.prototype.renderSkill = function () {
-	var rayon = 200;
+	var rayon = 180;
 	this._renderSkPro(this.skills.pro, rayon);
-	this._renderSkLang(this.skills.language, rayon, rayon - 50);
+	this._renderSkLang(this.skills.language, rayon, rayon);
 };
 
 function getGap(date1, date2) {

@@ -1,5 +1,5 @@
 function renderSkPro(sk) {
-    
+
     var options = {
         segmentStrokeWidth : 0,
         segmentStrokeColor : "rgba(0,0,0,0)",
@@ -7,23 +7,23 @@ function renderSkPro(sk) {
         animationEasing : "easeOutBounce",
         legendTemplate : "",
     };
-    
+
 
     var data = [];
     for (i in sk) {
         var percent = Math.round((sk[i].level/800) * 100);
         var elem = $('#sk-pro');
         var elem_sk = $("<div class='sk-pro'></div>");
-        elem_sk.append($('<canvas></canvas>').attr("id", sk[i].name).attr("width", 100));
+        elem_sk.append($('<canvas></canvas>').attr("id", sk[i].name).attr("width", 50));
         elem_sk.append($("<div class='sk-percent'></div>").html('<div class="sk-percent-align">' + percent.toString() + '%</div>'));
         elem_sk.append($('<p></p>').html(sk[i].name));
-        
+
         elem.append(elem_sk);
 
         data = [
             {label: sk[i].name, value: sk[i].level, color: sk[i].color},
             {label: sk[i].name, value: 800 - sk[i].level, color: 'rgba(0,0,0,0)'},
-            
+
         ];
         var ctx = document.getElementById(sk[i].name).getContext("2d");
         window.myDoughnut = new Chart(ctx).Doughnut(data, options);
@@ -42,7 +42,7 @@ function renderSkPerso(sk) {
         var stars = $('<td class="sk-perso-level"></td>');
         for (var j = 0; j < 5; j++) {
             if (j < sk[i].level)
-                stars.append($('<img src="http://trevieres.eu/camping-municipal/wp-content/uploads/2012/11/etoile-20jaune-1-4c90dc.jpg" height="40px">'));   
+                stars.append($('<img src="http://trevieres.eu/camping-municipal/wp-content/uploads/2012/11/etoile-20jaune-1-4c90dc.jpg" height="40px">'));
             else
                 stars.append($('<img class="img-bw" src="http://trevieres.eu/camping-municipal/wp-content/uploads/2012/11/etoile-20jaune-1-4c90dc.jpg" height="40px">'));
         }
@@ -56,7 +56,7 @@ function renderSkPerso(sk) {
 }
 
 (function () {
-    
+
     var skPro = [
         {name: 'programmation imperative', level: 666, color: '#daa420'},
         {name: 'algorithme & IA', level: 577, color: '#930e48'},
@@ -64,13 +64,13 @@ function renderSkPerso(sk) {
         {name: 'web', level: 295, color: '#88a725'},
         {name: 'programmation orienté object', level: 240, color: '#33203a'},
     ];
-    
+
     var skPerso = [
         {name: 'créativité', level: 5},
         {name: 'adaption', level: 4},
         {name: 'rigueur', level: 5},
     ];
-    
+
     renderSkPro(skPro);
     renderSkPerso(skPerso);
 
