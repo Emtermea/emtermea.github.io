@@ -1,5 +1,5 @@
-const dateSince = new Date('2010');
-const dateUntil = new Date('2018');
+const dateSince = new Date('2011');
+const dateUntil = new Date('2017');
 var nbTotalYears = dateUntil.getFullYear() - dateSince.getFullYear();
 var nbTotalDays = dateDiff(dateSince, dateUntil).day;
 var nbTimeline = 0;
@@ -63,10 +63,12 @@ function addTimeline(title, desc, since, until, color, labelBottom) {
 
   divDesc.append($('<h1>').css('color', color).html(title));
   divDesc.append($('<h2>').html(desc));
-  if (dUntil < new Date()) {
-    divDesc.append($('<h3>').html(since.substr(0, 4) + ' - ' + until.substr(0, 4)));
+	if (nbTimeline == 0) {
+		divDesc.append($('<h3>').html(until.substr(0, 4)));
+	} else if (dUntil < new Date()) {
+		divDesc.append($('<h3>').html(since.substr(0, 4) + ' - ' + until.substr(0, 4)));
   } else {
-    divDesc.append($('<h3>').html(since.substr(0, 4)));
+		divDesc.append($('<h3>').html(since.substr(0, 4)));
   }
   if (labelBottom) {
     divDesc.css('top', '40px');
@@ -114,11 +116,11 @@ function adaptWidthDesc() {
 
 setTimeyear();
 
-addTimeline('Bac S', 'Bac scientifique - Lycée porte de Normandie', '2009 sep', '2012 jul', '#88A725', false);
+addTimeline('Bac S', 'Bac scientifique - Lycée porte de Normandie', '2010 sep', '2012 jul', '#88A725', false);
 addTimeline('CDI étudiant', 'Grande surface', '2012 mar', '2014 sep', '#CF4024', true);
 addTimeline('DUT TC', 'Techniques de commercialisation - IUT d\'Evreux', '2012 sep', '2014 jun', '#ED8C2B', false);
-addTimeline('école 42', 'Paris 17éme', '2014 nov', '2017 jun', '#DAA420', true);
-addTimeline('Stage - Parrot', 'Service qualité - Software', '2016 feb', '2017 jun', '#5EB6DD', false);
+addTimeline('école 42', 'Paris 17ème', '2014 nov', '2016 nov', '#DAA420', true);
+addTimeline('Stage - Parrot', 'Service qualité - Software', '2016 feb', '2016 nov', '#5EB6DD', false);
 
 fadeFirstAndLast();
 adaptWidthDesc();
