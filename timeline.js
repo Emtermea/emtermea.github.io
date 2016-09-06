@@ -1,5 +1,5 @@
 const dateSince = new Date('2011');
-const dateUntil = new Date('2017');
+const dateUntil = new Date('2018');
 var nbTotalYears = dateUntil.getFullYear() - dateSince.getFullYear();
 var nbTotalDays = dateDiff(dateSince, dateUntil).day;
 var nbTimeline = 0;
@@ -119,8 +119,8 @@ setTimeyear();
 addTimeline('Bac S', 'Bac scientifique - Lycée porte de Normandie', '2010 sep', '2012 jul', '#88A725', false);
 addTimeline('CDI étudiant', 'Grande surface', '2012 mar', '2014 sep', '#CF4024', true);
 addTimeline('DUT TC', 'Techniques de commercialisation - IUT d\'Evreux', '2012 sep', '2014 jun', '#ED8C2B', false);
-addTimeline('école 42', 'Paris 17ème', '2014 nov', '2016 nov', '#DAA420', true);
-addTimeline('Stage - Parrot', 'Service qualité - Software', '2016 feb', '2016 nov', '#5EB6DD', false);
+addTimeline('école 42', 'Paris 17ème', '2014 nov', '2016 dec', '#DAA420', true);
+addTimeline('Stage - Parrot', 'Service qualité - Software', '2016 feb', '2016 dec', '#5EB6DD', false);
 
 fadeFirstAndLast();
 adaptWidthDesc();
