@@ -42,7 +42,7 @@ function getPos(since) {
   return ((100 / nbTotalDays) * (dateDiff(dateSince, dSince).day + 365 / 2));
 }
 
-function addTimeline(title, desc, since, until, color) {
+function addTimeline(title, desc, since, until, color, labelBottom) {
   var dSince = new Date(since);
   var dUntil = new Date(until);
 
@@ -68,7 +68,7 @@ function addTimeline(title, desc, since, until, color) {
   } else {
     divDesc.append($('<h3>').html(since.substr(0, 4)));
   }
-  if (nbTimeline == 1) {
+  if (labelBottom) {
     divDesc.css('top', '40px');
   } else {
     divDesc.css('bottom', '160px');
@@ -82,9 +82,11 @@ function addTimeline(title, desc, since, until, color) {
 
 function fadeFirstAndLast() {
   var eventFirst = $('.timeline-event-years').first();
+	var eventBLast = $('.timeline-event-years').eq(-2);
   var eventLast = $('.timeline-event-years').last();
 
   eventFirst.css('background', 'linear-gradient(to right, #262422, ' + eventFirst.css('background-color')  + ')');
+	eventBLast.css('background', 'linear-gradient(to left, #262422, ' + eventBLast.css('background-color')  + ')');
   eventLast.css('background', 'linear-gradient(to left, #262422, ' + eventLast.css('background-color')  + ')');
 }
 
@@ -112,10 +114,11 @@ function adaptWidthDesc() {
 
 setTimeyear();
 
-addTimeline('Bac S', 'Bac scientifique - Lycée porte de Normandie', '2009 sep', '2012 jul', '#88A725');
-addTimeline('CDI étudiant', 'Grande surface', '2012 mar', '2014 sep', '#CF4024');
-addTimeline('DUT TC', 'Techniques de commercialisation - IUT d\'Evreux', '2012 sep', '2014 jun', '#ED8C2B');
-addTimeline('école 42', 'Paris 17éme', '2014 nov', '2017 jun', '#DAA420');
+addTimeline('Bac S', 'Bac scientifique - Lycée porte de Normandie', '2009 sep', '2012 jul', '#88A725', false);
+addTimeline('CDI étudiant', 'Grande surface', '2012 mar', '2014 sep', '#CF4024', true);
+addTimeline('DUT TC', 'Techniques de commercialisation - IUT d\'Evreux', '2012 sep', '2014 jun', '#ED8C2B', false);
+addTimeline('école 42', 'Paris 17éme', '2014 nov', '2017 jun', '#DAA420', true);
+addTimeline('Stage - Parrot', 'Service qualité - Software', '2016 feb', '2017 jun', '#5EB6DD', false);
 
 fadeFirstAndLast();
 adaptWidthDesc();

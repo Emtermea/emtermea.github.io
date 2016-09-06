@@ -7,15 +7,15 @@ function Manue(skills, parcours, work, hobbies) {
 	this.contact = {
 		mail: {
 			data: 'emtermea@student.42.fr',
-			img: '/img/mail_'
+			img: 'img/mail_'
 		},
 		tel: {
 			data: '06 50 65 42 57',
-			img: '/img/tel_'
+			img: 'img/tel_'
 		},
 		github: {
 			data: '/emtermea',
-			img: '/img/github_'
+			img: 'img/github_'
 		}
 	};
 	this.skills = skills;
@@ -74,17 +74,17 @@ Manue.prototype._renderSkPro = function (sk, rayon) {
 		.css('top', y)
 		.css('left', x)
 		.css('color', sk[i].color)
-		.html(sk[i].name)
-	);
-	data.push({
-		label: sk[i].name,
-		value: sk[i].level,
-		color: sk[i].color
-	});
-}
+		.html(sk[i].name));
 
-var ctx = document.getElementById('sk-can-pro').getContext("2d");
-window.myDoughnut = new Chart(ctx).Doughnut(data, options);
+		data.push({
+			label: sk[i].name,
+			value: sk[i].level,
+			color: sk[i].color
+		});
+	}
+
+	var ctx = document.getElementById('sk-can-pro').getContext("2d");
+	window.myDoughnut = new Chart(ctx).Doughnut(data, options);
 }
 
 Manue.prototype._renderSkLang = function (sk, exRayon, rayon) {
@@ -138,17 +138,17 @@ Manue.prototype._renderSkLang = function (sk, exRayon, rayon) {
 		.css('top', y)
 		.css('left', x)
 		.css('color', '#f3e5bf')
-		.html(sk[i].name)
-	);
-	data.push({
-		label: sk[i].name,
-		value: sk[i].level,
-		color: sk[i].color
-	});
-}
+		.html(sk[i].name));
 
-var ctx = document.getElementById('sk-can-lang').getContext("2d");
-window.myDoughnut = new Chart(ctx).Doughnut(data, options);
+		data.push({
+			label: sk[i].name,
+			value: sk[i].level,
+			color: sk[i].color
+		});
+	}
+
+	var ctx = document.getElementById('sk-can-lang').getContext("2d");
+	window.myDoughnut = new Chart(ctx).Doughnut(data, options);
 }
 
 Manue.prototype.renderSkill = function () {
@@ -484,13 +484,13 @@ var work = [
 	{
 		name: 'libft',
 		detail: 'Reprend des fonctions basiques de la libC',
-		img: '/img/lib.png',
+		img: 'img/lib.png',
 		url: 'https://github.com/emtermea/Libft'
 	},
 	{
 		name: 'libAsm',
 		detail: 'Reprend des fonctions basiques de la libC en ASM',
-		img: '/img/libasm.png',
+		img: 'img/libasm.png',
 		url: 'https://github.com/emtermea/LibASM'
 	},
 ];
@@ -499,17 +499,17 @@ var hobbies = [
 	{
 		name: 'sports',
 		detail: 'Membre d\'une équipe de handball pendant 13 ans',
-		img: '/img/sport.png'
+		img: 'img/sport.png'
 	},
 	{
 		name: 'séries TV',
 		detail: 'Just I like it',
-		img: '/img/pop.png'
+		img: 'img/pop.png'
 	},
 	{
 		name: 'domaine associatif',
 		detail: 'BDE de l\'ecole 42 - Festi’Routils (27)',
-		img: '/img/assoc.png'
+		img: 'img/assoc.png'
 	},
 ];
 
